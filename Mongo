@@ -68,7 +68,7 @@ db.demodata.updateMany({type:"font-end"}, {$set:{active:false}})
 { "acknowledged" : true, "deletedCount" : 0 }
 
 
- db.collection.deleteMany({}) // collection deleted
+ db.collection.deleteMany({}) // all document deleted from collection(Tables)
 
 
 
