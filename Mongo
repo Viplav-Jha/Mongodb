@@ -19,4 +19,42 @@ demodata
         "insertedId" : ObjectId("608ff03c85e616824381f1d8")
 }
 
+// db.demodata.insertMany([{name:"javascript",type:"font-end",video:5,active:true},{name:"javascript",type:"font-end",video:5,active:true}])
+
+
+> db.demodata.find().pretty()
+{
+        "_id" : ObjectId("608fe009a649ec946a1231fb"),
+        "name" : "reactjs",
+        "type" : "font-end",
+        "videos" : 80,
+        "active" : false
+}
+{
+        "_id" : ObjectId("608fe68b85e616824381f1d5"),
+        "name" : "mongodb",
+        "type" : "db",
+        "video" : 5,
+        "active" : true
+}
+{
+        "_id" : ObjectId("608fe73e85e616824381f1d6"),
+        "name" : "java",
+        "type" : "font-end",
+        "video" : 15,
+        "active" : false
+}
+{
+        "_id" : ObjectId("608ff03c85e616824381f1d8"),
+        "name" : "javascript",
+        "type" : "font-end",
+        "video" : 5,
+        "active" : true
+}
+
+> db.demodata.updateOne({name:"java"} , {$set: {type:"font-end"} })
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 0 }
+
+db.demodata.updateMany({type:"font-end"}, {$set:{active:false}}) 
+
 
