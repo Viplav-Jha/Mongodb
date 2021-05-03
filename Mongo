@@ -10,3 +10,13 @@ test         0.000GB
 
 use db // enterinto db
 
+show collections
+demodata
+
+> db.demodata.insertOne({name:"javascript",type:"font-end",video:5,active:true})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("608ff03c85e616824381f1d8")
+}
+
+
