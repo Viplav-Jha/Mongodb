@@ -7,7 +7,7 @@ demoproject  0.000GB
 local        0.000GB
 nsecomDb     0.000GB
 test         0.000GB
-
+---------------------------------------------------------------------
 use db // enterinto db
 
 show collections
