@@ -60,7 +60,7 @@ db.demodata.updateMany({type:"font-end"}, {$set:{active:false}})
 > db.demodata.find({name:"mongodb"},{name:0}).pretty() 
 
 > db.demodata.find({name:"mongodb"},{name:1}).pretty()
-{ "_id" : ObjectId("608fe68b85e616824381f1d5"), "name" : "mongodb" }
+{ "_id" :ObjectId("608fe68b85e616824381f1d5"), "name" : "mongodb" }
 >     
 //Delete
  db.collection.deleteMany({type:"Back-end"})
