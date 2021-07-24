@@ -79,4 +79,46 @@ mongoose.connect("mongodb://localhost:27017/demo",{useNewUrlParser:true,useUnifi
 then(()=>console.log("connection established"))
 .catch((err)=>console.log("err"));
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+const mongoose =require("mongoose")
+mongoose.connect("mongodb://localhost:27017/viplavtest",{useNewUrlParser:true , useUnifiedTopology:true} )
+.then(()=>console.log("connection established")).catch((err)=>console.log(err))
+
+// Mangoose define a structure of schema 
+// default value and variables etc...
+const ReactSchema = new mongoose.Schema({
+  name:{
+      type:String ,
+      required:true
+    } ,
+  ctype : String,
+  likes : Number,
+  author: String , 
+  active :Boolean ,
+ date :{
+      type:Date,
+      default:Date.now
+  }
+})
+// create collection 
+const playlists =new mongoose.model("Playlist",ReactSchema)
+//create document or insert                                          
+const createDocument = async ()=>{
+    try {
+   const reactPlaylists = new playlists({
+    name : "ReactJs",
+    ctype : "Front-end",
+    likes : 25,
+    author: "Viplav" , 
+    active :true 
+})
+const result = await reactPlaylists.save()
+ console.log(result)
+}
+catch(err) {
+    console.log(err)
+}
+}
+createDocument();
