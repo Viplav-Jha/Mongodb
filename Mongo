@@ -102,7 +102,7 @@ const ReactSchema = new mongoose.Schema({
       default:Date.now
   }
 })
-// create collection 
+// Create collection 
 const playlists =new mongoose.model("Playlist",ReactSchema)
 //create document or insert                                          
 const createDocument = async ()=>{
