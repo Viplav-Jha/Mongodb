@@ -118,6 +118,7 @@ const result = await reactPlaylists.save()
  console.log(result)
 }
 catch(err) {
+
     console.log(err)
 }
 }
